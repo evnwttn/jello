@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Task } from 'src/app/types/Task';
 
 @Component({
@@ -7,6 +7,7 @@ import { Task } from 'src/app/types/Task';
   styleUrls: ['./add-task.component.css'],
 })
 export class AddTaskComponent {
+  @Output() onAddTask: EventEmitter<Task> = new EventEmitter();
   task: string = '';
   day: string = '';
   reminder: boolean = false;
@@ -21,8 +22,12 @@ export class AddTaskComponent {
       task: this.task,
       day: this.day,
       reminder: this.reminder,
-
-      // emit task
     };
+
+    this.onAddTask.emit(newTask);
+
+    this.task = '';
+    this.day = '';
+    this.reminder = false;
   }
 }
