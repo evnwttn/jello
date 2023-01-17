@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { Task } from '../types/Task';
 import { dummyTasks } from '../dummy/dummyTasks';
 
@@ -8,7 +9,8 @@ import { dummyTasks } from '../dummy/dummyTasks';
 export class TaskService {
   constructor() {}
 
-  getTasks(): Task[] {
-    return dummyTasks;
+  getTasks(): Observable<Task[]> {
+    const tasks = of(dummyTasks);
+    return tasks;
   }
 }
