@@ -4,19 +4,19 @@
       "id": 1,
       "task": "PTA Meeting",
       "day": "Jan 10",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 2,
       "task": "Dentist Appointment",
       "day": "Jan 11",
-      "reminder": false
+      "reminder": false,
     },
     {
       "id": 3,
       "task": "Job Interview",
       "day": "Jan 12",
-      "reminder": true
+      "reminder": false
     }
   ]
 }
