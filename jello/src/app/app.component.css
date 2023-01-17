@@ -1,3 +1,11 @@
 .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.app {
     background-color: whitesmoke;
+    margin-top: 5vh;
+    width: 50vw;
 }
