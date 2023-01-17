@@ -10,7 +10,7 @@
       "id": 2,
       "task": "Dentist Appointment",
       "day": "Jan 11",
-      "reminder": false,
+      "reminder": false
     },
     {
       "id": 3,
