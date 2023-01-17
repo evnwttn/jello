@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { dummyTasks } from 'src/app/dummy/dummyTasks';
+import { Component, OnInit } from '@angular/core';
+import { TaskService } from 'src/app/services/task.service';
 import { Task } from 'src/app/types/Task';
 
 @Component({
@@ -8,5 +8,11 @@ import { Task } from 'src/app/types/Task';
   styleUrls: ['./tasks.component.css'],
 })
 export class TasksComponent {
-  tasks: Task[] = dummyTasks;
+  tasks: Task[] = [];
+
+  constructor(private taskService: TaskService) {}
+
+  ngOnInit(): void {
+    this.tasks = this.taskService.getTasks();
+  }
 }
