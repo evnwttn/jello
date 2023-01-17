@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Task } from '../types/Task';
+import { dummyTasks } from '../dummy/dummyTasks';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TaskService {
+  constructor() {}
 
-  constructor() { }
+  getTasks(): Task[] {
+    return dummyTasks;
+  }
 }
